@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Fri May 24 13:12:00 2024
+# Process ID: 5008
+# Current directory: /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC
+# Command line: vivado
+# Log file: /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/vivado.log
+# Journal file: /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/vivado.jou
+# Running On: insa-20549, OS: Linux, CPU Frequency: 846.884 MHz, CPU Physical cores: 6, Host memory: 16545 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/carraz-b/4A/PSI/CPU_RISC/CPU_RISC.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+close [ open /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/ALEAS_GEST.vhd w ]
+add_files /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/ALEAS_GEST.vhd
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_simulation
+open_wave_config /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/Proc_Test_behav.wcfg
+source Proc_Test.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/Proc_Test_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/Proc_Test_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/Proc_Test_behav.wcfg}
+save_wave_config {/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/Proc_Test_behav.wcfg}
+close_sim

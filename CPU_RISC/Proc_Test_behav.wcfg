@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,902.918 ns"></ZoomEndTime>
-      <Cursor1Time time="863.235 ns"></Cursor1Time>
+      <ZoomEndTime time="141.001 ns"></ZoomEndTime>
+      <Cursor1Time time="107.900 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="164"></NameColumnWidth>
-      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+      <ValueColumnWidth column_width="130"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="17" />
    <wvobject type="array" fp_name="/Proc_Test/IP">
       <obj_property name="ElementShortName">IP[7:0]</obj_property>
       <obj_property name="ObjectShortName">IP[7:0]</obj_property>
@@ -43,9 +43,18 @@
       <obj_property name="ElementShortName">CLK_period</obj_property>
       <obj_property name="ObjectShortName">CLK_period</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/Proc_Test/uut/alea">
+      <obj_property name="ElementShortName">alea</obj_property>
+      <obj_property name="ObjectShortName">alea</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Proc_Test/uut/add_INPUT_INSTR">
+      <obj_property name="ElementShortName">add_INPUT_INSTR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">add_INPUT_INSTR[7:0]</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group801">
       <obj_property name="label">LI_DI_PL</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/IN_OP">
          <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
          <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
@@ -86,6 +95,11 @@
    <wvobject type="group" fp_name="group811">
       <obj_property name="label">DI_EX_PL</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_OP">
+         <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
+      </wvobject>
       <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_A">
          <obj_property name="ElementShortName">IN_A[7:0]</obj_property>
          <obj_property name="ObjectShortName">IN_A[7:0]</obj_property>
@@ -98,9 +112,9 @@
          <obj_property name="ElementShortName">IN_C[7:0]</obj_property>
          <obj_property name="ObjectShortName">IN_C[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_OP">
-         <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
-         <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_OP">
+         <obj_property name="ElementShortName">OUT_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_OP[7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_A">
          <obj_property name="ElementShortName">OUT_A[7:0]</obj_property>
@@ -114,10 +128,6 @@
          <obj_property name="ElementShortName">OUT_C[7:0]</obj_property>
          <obj_property name="ObjectShortName">OUT_C[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_OP">
-         <obj_property name="ElementShortName">OUT_OP[7:0]</obj_property>
-         <obj_property name="ObjectShortName">OUT_OP[7:0]</obj_property>
-      </wvobject>
       <wvobject type="logic" fp_name="/Proc_Test/uut/DI_EX_PL/CLK">
          <obj_property name="ElementShortName">CLK</obj_property>
          <obj_property name="ObjectShortName">CLK</obj_property>
@@ -126,6 +136,7 @@
    <wvobject type="group" fp_name="group834">
       <obj_property name="label">EX_Mem_PL</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/Proc_Test/uut/EX_Mem_PL/CLK">
          <obj_property name="ElementShortName">CLK</obj_property>
          <obj_property name="ObjectShortName">CLK</obj_property>
@@ -190,6 +201,7 @@
    <wvobject type="group" fp_name="group179">
       <obj_property name="label">BMI</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/Proc_Test/uut/BMI/bancMem_instr">
          <obj_property name="ElementShortName">bancMem_instr[0:255][31:0]</obj_property>
          <obj_property name="ObjectShortName">bancMem_instr[0:255][31:0]</obj_property>
@@ -306,7 +318,6 @@
    <wvobject type="group" fp_name="group304">
       <obj_property name="label">BMD</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/Proc_Test/uut/BMD/add">
          <obj_property name="ElementShortName">add[7:0]</obj_property>
          <obj_property name="ObjectShortName">add[7:0]</obj_property>

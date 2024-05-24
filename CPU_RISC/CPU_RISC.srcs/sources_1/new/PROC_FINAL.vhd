@@ -85,6 +85,7 @@ end component;
 component BancMem_Instr is
     Port ( add : in STD_LOGIC_VECTOR (7 downto 0);
            CLK : in STD_LOGIC;
+           EN_BMI : in STD_LOGIC;
            OUT_D : out STD_LOGIC_VECTOR (31 downto 0));
 end component;
 
@@ -99,6 +100,8 @@ component Pipeline3Ch is
            OUT_B : out STD_LOGIC_VECTOR (7 downto 0);
            OUT_C : out STD_LOGIC_VECTOR (7 downto 0);
            OUT_OP : out STD_LOGIC_VECTOR (7 downto 0);
+           EN_PPLN3 : in STD_LOGIC;
+           FLUSH_PPLN3 : in STD_LOGIC;
            CLK : in STD_LOGIC);
 end component;
 
@@ -109,6 +112,7 @@ component Pipeline2Ch is
            OUT_A : out STD_LOGIC_VECTOR (7 downto 0);
            OUT_B : out STD_LOGIC_VECTOR (7 downto 0);
            OUT_OP : out STD_LOGIC_VECTOR (7 downto 0);
+           EN_PPLN2 : in STD_LOGIC;
            CLK : in STD_LOGIC);
 end component;
 
@@ -123,12 +127,14 @@ type Ppln3 is record
     OP : STD_LOGIC_VECTOR (7 downto 0);
     B : STD_LOGIC_VECTOR (7 downto 0);
     C : STD_LOGIC_VECTOR (7 downto 0);
+    EN : std_logic;
 end record Ppln3;
 
 type Ppln2 is record
     A : STD_LOGIC_VECTOR (7 downto 0);
     OP : STD_LOGIC_VECTOR (7 downto 0);
     B : STD_LOGIC_VECTOR (7 downto 0);
+    EN : std_logic;
 end record Ppln2;
 
 signal LI_DI : Ppln3;
@@ -166,25 +172,44 @@ signal QB_REG : STD_LOGIC_VECTOR (7 downto 0);
 -----------Instructions memory------------
  
 signal add_INPUT_INSTR : STD_LOGIC_VECTOR (7 downto 0);
+signal INST_SAVE : STD_LOGIC_VECTOR (7 downto 0);
 signal OUT_D_INSTR : STD_LOGIC_VECTOR (31 downto 0);
 
 ----------Data Memory---------------------
 
 signal OUT_D_DATA : STD_LOGIC_VECTOR (7 downto 0);
 
+-----------Enables for aleas----------------
+
+signal EN_COUNT : STD_LOGIC;
+signal EN_BMI : STD_LOGIC;
+signal EN_LI_DI : STD_LOGIC;
+signal EN_DI_EX : STD_LOGIC;
+signal EN_EX_Mem : STD_LOGIC;
+signal EN_Mem_RE : STD_LOGIC;
+signal alea, FLUSH_DI_EX, read_li_di_b,read_li_di_c, write_di_ex, write_ex_mem  : STD_LOGIC;
+
 begin
 
+    -------------Increment instructions---------------
+
     Instructions : process
-    begin 
-        wait until CLK_P'event and CLK_P ='1';
-        if rst_p = '0' then
-            add_INPUT_INSTR <= x"00";
-        else
-            add_INPUT_INSTR <= add_INPUT_INSTR + 1;
-        end if;
+    begin
+            wait until CLK_P'event and CLK_P ='1';
+        if EN_LI_DI = '0' then
+            if rst_p = '0' then
+                add_INPUT_INSTR <= x"00";
+            else
+                add_INPUT_INSTR <= add_INPUT_INSTR + 1;
+            end if;
+        end if; 
     end process;
-
-
+    
+    -----------Outputs------------------
+    
+    QA <= QA_REG;
+    QB <= QB_REG;
+    
     --------LOGIC COMB--------------
     
     LC_DI_EX_EX_Mem <= DI_EX.OP(2 downto 0);
@@ -198,14 +223,28 @@ begin
     MUX_EX_Mem_Mem_RE_IN <= EX_Mem.A when EX_Mem.OP = x"08" else EX_Mem.B;
     MUX_EX_Mem_Mem_RE_OUT <= OUT_D_DATA when EX_Mem.OP = x"07" else EX_Mem.B;
     
-    QA <= QA_REG;
-    QB <= QB_REG;
+    -------------ALEAS---------------------
+    read_li_di_b <= '1' when (LI_DI.OP = x"01" or LI_DI.OP = x"02" or LI_DI.OP = x"03" or LI_DI.OP = x"04" or LI_DI.OP = x"05" or LI_DI.OP = x"07" or LI_DI.OP = x"08" )   else '0';
+    read_li_di_c <= '1' when (LI_DI.OP = x"01" or LI_DI.OP = x"02" or LI_DI.OP = x"03" or LI_DI.OP = x"04")   else '0';
+    write_di_ex <= '1' when (LI_DI.OP = x"01" or LI_DI.OP = x"02" or LI_DI.OP = x"03" or LI_DI.OP = x"04" or LI_DI.OP = x"05" or LI_DI.OP = x"06" or LI_DI.OP = x"07" or LI_DI.OP = x"08") else '0';
+    write_ex_mem <= '1' when (LI_DI.OP = x"01" or LI_DI.OP = x"02" or LI_DI.OP = x"03" or LI_DI.OP = x"04" or LI_DI.OP = x"05" or LI_DI.OP = x"06" or LI_DI.OP = x"07" or LI_DI.OP = x"08") else '0';
+    alea <= '1' when (read_li_di_b = '1' and write_di_ex = '1' and DI_EX.A=LI_DI.B) or (read_li_di_c = '1' and write_di_ex = '1' and DI_EX.A=LI_DI.C) or (read_li_di_b = '1' and write_ex_mem = '1' and EX_MEM.A=LI_DI.B) or (read_li_di_c = '1' and write_ex_mem = '1' and EX_MEM.A=LI_DI.C) else '0';
+    -- alea <= '1' when (LI_DI.OP = x"05" and DI_EX.OP = x"06" and DI_EX.A=LI_DI.B) or (LI_DI.OP = x"05" and DI_EX.OP = x"06" and DI_EX.A=LI_DI.B) or (LI_DI.OP = x"06" and EX_Mem.OP = x"05" and Ex_Mem.A=LI_DI.B) or (LI_DI.OP = x"05" and EX_Mem.OP = x"06" and Ex_Mem.A=LI_DI.B) else '0';
+    EN_COUNT <= alea;
+    EN_BMI <= alea;
+    EN_LI_DI <= alea;
+    EN_DI_EX <= '1';
+    FLUSH_DI_EX <= alea;
+    EN_EX_Mem <= '1';
+    EN_Mem_RE <= '1';
+    
 
 
     BMI : BancMem_Instr PORT MAP(
         add => add_INPUT_INSTR,
         CLK => CLK_P,
-        OUT_D => OUT_D_INSTR
+        OUT_D => OUT_D_INSTR,
+        EN_BMI => EN_BMI
     );
     
     LI_DI_PL : Pipeline3Ch PORT MAP(
@@ -217,7 +256,9 @@ begin
         OUT_B => LI_DI.B,
         OUT_C => LI_DI.C,
         OUT_OP => LI_DI.OP,
-        CLK => CLK_P
+        CLK => CLK_P,
+        EN_PPLN3 => EN_LI_DI,
+        FLUSH_PPLN3  => '0'
     );
 
     DI_EX_PL : Pipeline3Ch PORT MAP(
@@ -229,7 +270,9 @@ begin
         OUT_B => DI_EX.B,
         OUT_C => DI_EX.C,
         OUT_OP => DI_EX.OP,
-        CLK => CLK_P
+        CLK => CLK_P,
+        EN_PPLN3 => '0',
+        FLUSH_PPLN3  => FLUSH_DI_EX
     );
     
     EX_Mem_PL : Pipeline2Ch PORT MAP(
@@ -239,7 +282,8 @@ begin
         OUT_A => EX_Mem.A,
         OUT_B => EX_Mem.B,
         OUT_OP => EX_Mem.OP,
-        CLK => CLK_P
+        CLK => CLK_P,
+        EN_PPLN2 => EN_EX_Mem
     );
     
     Mem_RE_PL : Pipeline2Ch PORT MAP(
@@ -249,7 +293,8 @@ begin
         OUT_A => Mem_RE.A,
         OUT_B => Mem_RE.B,
         OUT_OP => Mem_RE.OP,
-        CLK => CLK_P
+        CLK => CLK_P,
+        EN_PPLN2 => EN_Mem_RE
     );
     
      RB : BancReg PORT MAP(

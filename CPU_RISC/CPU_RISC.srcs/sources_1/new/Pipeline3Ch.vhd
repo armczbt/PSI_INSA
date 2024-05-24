@@ -40,6 +40,8 @@ entity Pipeline3Ch is
            OUT_B : out STD_LOGIC_VECTOR (7 downto 0);
            OUT_C : out STD_LOGIC_VECTOR (7 downto 0);
            OUT_OP : out STD_LOGIC_VECTOR (7 downto 0);
+           EN_PPLN3 : in STD_LOGIC;
+           FLUSH_PPLN3 : in STD_LOGIC;
            CLK : in STD_LOGIC);
 end Pipeline3Ch;
 
@@ -51,12 +53,23 @@ process
 
 begin
 
-    wait until CLK'event and CLK ='1';
-    
-    OUT_OP <= IN_OP;
-    OUT_A <= IN_A;
-    OUT_B <= IN_B;
-    OUT_C <= IN_C;
+        wait until CLK'event and CLK ='1';
+        if FLUSH_PPLN3 = '0' then
+            if EN_PPLN3 = '0' then
+                OUT_OP <= IN_OP;
+                OUT_A <= IN_A;
+                OUT_B <= IN_B;
+                OUT_C <= IN_C;
+            end if;
+         else
+            
+            OUT_OP <= (others => '0');
+            OUT_A  <= (others => '0');
+            OUT_B  <= (others => '0');
+            OUT_C  <= (others => '0');
+            
+            
+        end if;
     
 end process;
     

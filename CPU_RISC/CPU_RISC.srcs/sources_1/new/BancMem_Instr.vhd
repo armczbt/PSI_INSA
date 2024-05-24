@@ -34,7 +34,9 @@ use IEEE.NUMERIC_STD.ALL;
 entity BancMem_Instr is
     Port ( add : in STD_LOGIC_VECTOR (7 downto 0);
            CLK : in STD_LOGIC;
+           EN_BMI : in STD_LOGIC;
            OUT_D : out STD_LOGIC_VECTOR (31 downto 0));
+           
 end BancMem_Instr;
 
 
@@ -47,7 +49,7 @@ signal bancMem_instr : mem_instr;
 begin
 
  bancMem_instr <= (x"00000000",x"06040106", x"07060206", x"04050106", x"04010205", x"01020301", x"03020402", x"03040503", 
-                    x"08050607", x"05050108", others => x"ffffffff"); --instanciée pour tester 
+                    x"08050607", x"05050108", x"08150206", x"07020805", x"06040106", x"ff040106", others => x"ffffffff"); --instanciée pour tester 
  -- x"00" rien
  -- x"01" on AFC 4 dans l'adresse 01
  -- x"02" on AFC 6 dans l'adresse 02
@@ -61,12 +63,12 @@ begin
  
  memInstr : process
     begin
-    
-        wait until CLK'event and CLK = '1';
+            wait until CLK'event and CLK = '1';
+        if EN_BMI = '0' then
+            
+            OUT_D <= bancMem_instr(to_integer(unsigned(add)));
         
-        OUT_D <= bancMem_instr(to_integer(unsigned(add)));
-         
-       report "test";
+        end if;
     end process;
 
 

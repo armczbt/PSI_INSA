@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Proc_Test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Proc_Test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,902.918 ns"></ZoomEndTime>
+      <Cursor1Time time="863.235 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="164"></NameColumnWidth>
+      <ValueColumnWidth column_width="134"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="15" />
+   <wvobject type="array" fp_name="/Proc_Test/IP">
+      <obj_property name="ElementShortName">IP[7:0]</obj_property>
+      <obj_property name="ObjectShortName">IP[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Proc_Test/CLK_P">
+      <obj_property name="ElementShortName">CLK_P</obj_property>
+      <obj_property name="ObjectShortName">CLK_P</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/Proc_Test/RST_P">
+      <obj_property name="ElementShortName">RST_P</obj_property>
+      <obj_property name="ObjectShortName">RST_P</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Proc_Test/QA">
+      <obj_property name="ElementShortName">QA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">QA[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/Proc_Test/QB">
+      <obj_property name="ElementShortName">QB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">QB[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/Proc_Test/CLK_period">
+      <obj_property name="ElementShortName">CLK_period</obj_property>
+      <obj_property name="ObjectShortName">CLK_period</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group801">
+      <obj_property name="label">LI_DI_PL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/IN_OP">
+         <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/IN_A">
+         <obj_property name="ElementShortName">IN_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/IN_B">
+         <obj_property name="ElementShortName">IN_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/IN_C">
+         <obj_property name="ElementShortName">IN_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_C[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/OUT_OP">
+         <obj_property name="ElementShortName">OUT_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/OUT_A">
+         <obj_property name="ElementShortName">OUT_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/OUT_C">
+         <obj_property name="ElementShortName">OUT_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_C[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/LI_DI_PL/OUT_B">
+         <obj_property name="ElementShortName">OUT_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/LI_DI_PL/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group811">
+      <obj_property name="label">DI_EX_PL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_A">
+         <obj_property name="ElementShortName">IN_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_B">
+         <obj_property name="ElementShortName">IN_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_C">
+         <obj_property name="ElementShortName">IN_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_C[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/IN_OP">
+         <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_A">
+         <obj_property name="ElementShortName">OUT_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_B">
+         <obj_property name="ElementShortName">OUT_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_C">
+         <obj_property name="ElementShortName">OUT_C[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_C[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/DI_EX_PL/OUT_OP">
+         <obj_property name="ElementShortName">OUT_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/DI_EX_PL/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group834">
+      <obj_property name="label">EX_Mem_PL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/EX_Mem_PL/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/EX_Mem_PL/OUT_A">
+         <obj_property name="ElementShortName">OUT_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/EX_Mem_PL/OUT_B">
+         <obj_property name="ElementShortName">OUT_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/EX_Mem_PL/OUT_OP">
+         <obj_property name="ElementShortName">OUT_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/EX_Mem_PL/IN_OP">
+         <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/EX_Mem_PL/IN_B">
+         <obj_property name="ElementShortName">IN_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/EX_Mem_PL/IN_A">
+         <obj_property name="ElementShortName">IN_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_A[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group842">
+      <obj_property name="label">MEM_RE_PL</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/Mem_RE_PL/IN_OP">
+         <obj_property name="ElementShortName">IN_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/Mem_RE_PL/IN_A">
+         <obj_property name="ElementShortName">IN_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/Mem_RE_PL/IN_B">
+         <obj_property name="ElementShortName">IN_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/Mem_RE_PL/OUT_OP">
+         <obj_property name="ElementShortName">OUT_OP[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_OP[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/Mem_RE_PL/OUT_A">
+         <obj_property name="ElementShortName">OUT_A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/Mem_RE_PL/OUT_B">
+         <obj_property name="ElementShortName">OUT_B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/Mem_RE_PL/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group179">
+      <obj_property name="label">BMI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMI/bancMem_instr">
+         <obj_property name="ElementShortName">bancMem_instr[0:255][31:0]</obj_property>
+         <obj_property name="ObjectShortName">bancMem_instr[0:255][31:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMI/OUT_D">
+         <obj_property name="ElementShortName">OUT_D[31:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_D[31:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/BMI/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMI/add">
+         <obj_property name="ElementShortName">add[7:0]</obj_property>
+         <obj_property name="ObjectShortName">add[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group191">
+      <obj_property name="label">RB</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/addA">
+         <obj_property name="ElementShortName">addA[3:0]</obj_property>
+         <obj_property name="ObjectShortName">addA[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/addB">
+         <obj_property name="ElementShortName">addB[3:0]</obj_property>
+         <obj_property name="ObjectShortName">addB[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/addW">
+         <obj_property name="ElementShortName">addW[3:0]</obj_property>
+         <obj_property name="ObjectShortName">addW[3:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/RB/W">
+         <obj_property name="ElementShortName">W</obj_property>
+         <obj_property name="ObjectShortName">W</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/DATA">
+         <obj_property name="ElementShortName">DATA[7:0]</obj_property>
+         <obj_property name="ObjectShortName">DATA[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/RB/RST">
+         <obj_property name="ElementShortName">RST</obj_property>
+         <obj_property name="ObjectShortName">RST</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/RB/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/QA">
+         <obj_property name="ElementShortName">QA[7:0]</obj_property>
+         <obj_property name="ObjectShortName">QA[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/QB">
+         <obj_property name="ElementShortName">QB[7:0]</obj_property>
+         <obj_property name="ObjectShortName">QB[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/RB/regs">
+         <obj_property name="ElementShortName">regs[0:15][7:0]</obj_property>
+         <obj_property name="ObjectShortName">regs[0:15][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group410">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/A">
+         <obj_property name="ElementShortName">A[7:0]</obj_property>
+         <obj_property name="ObjectShortName">A[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/B">
+         <obj_property name="ElementShortName">B[7:0]</obj_property>
+         <obj_property name="ObjectShortName">B[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/Ctrl_Alu">
+         <obj_property name="ElementShortName">Ctrl_Alu[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Ctrl_Alu[2:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/S">
+         <obj_property name="ElementShortName">S[7:0]</obj_property>
+         <obj_property name="ObjectShortName">S[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/UAL/N">
+         <obj_property name="ElementShortName">N</obj_property>
+         <obj_property name="ObjectShortName">N</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/UAL/Z">
+         <obj_property name="ElementShortName">Z</obj_property>
+         <obj_property name="ObjectShortName">Z</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/UAL/O">
+         <obj_property name="ElementShortName">O</obj_property>
+         <obj_property name="ObjectShortName">O</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/UAL/C">
+         <obj_property name="ElementShortName">C</obj_property>
+         <obj_property name="ObjectShortName">C</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/res">
+         <obj_property name="ElementShortName">res[15:0]</obj_property>
+         <obj_property name="ObjectShortName">res[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/A_aux">
+         <obj_property name="ElementShortName">A_aux[15:0]</obj_property>
+         <obj_property name="ObjectShortName">A_aux[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/B_aux">
+         <obj_property name="ElementShortName">B_aux[15:0]</obj_property>
+         <obj_property name="ObjectShortName">B_aux[15:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/UAL/empty_sig">
+         <obj_property name="ElementShortName">empty_sig[15:0]</obj_property>
+         <obj_property name="ObjectShortName">empty_sig[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group304">
+      <obj_property name="label">BMD</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMD/add">
+         <obj_property name="ElementShortName">add[7:0]</obj_property>
+         <obj_property name="ObjectShortName">add[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/BMD/RW">
+         <obj_property name="ElementShortName">RW</obj_property>
+         <obj_property name="ObjectShortName">RW</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMD/IN_D">
+         <obj_property name="ElementShortName">IN_D[7:0]</obj_property>
+         <obj_property name="ObjectShortName">IN_D[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/BMD/RST">
+         <obj_property name="ElementShortName">RST</obj_property>
+         <obj_property name="ObjectShortName">RST</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/Proc_Test/uut/BMD/CLK">
+         <obj_property name="ElementShortName">CLK</obj_property>
+         <obj_property name="ObjectShortName">CLK</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMD/OUT_D">
+         <obj_property name="ElementShortName">OUT_D[7:0]</obj_property>
+         <obj_property name="ObjectShortName">OUT_D[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/Proc_Test/uut/BMD/mem_data">
+         <obj_property name="ElementShortName">mem_data[0:255][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem_data[0:255][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/Proc_Test/uut/MUX_LI_DI_DI_EX">
+      <obj_property name="ElementShortName">MUX_LI_DI_DI_EX[7:0]</obj_property>
+      <obj_property name="ObjectShortName">MUX_LI_DI_DI_EX[7:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -16,5 +16,5 @@ clean:
 	rm lex lex.tab.c lex.yy.c lex.tab.h lex.output
 
 test: all
-	cat test.c | ./lex > f.txt
-	python3 interp.py f.txt 
+	cat test.c | ./lex > assembly_instructions.txt
+	python3 interp.py assembly_instructions.txt 

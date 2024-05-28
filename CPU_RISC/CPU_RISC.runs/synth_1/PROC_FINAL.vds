@@ -1,0 +1,239 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue May 28 09:38:40 2024
+# Process ID: 9614
+# Current directory: /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.runs/synth_1
+# Command line: vivado -log PROC_FINAL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PROC_FINAL.tcl
+# Log file: /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.runs/synth_1/PROC_FINAL.vds
+# Journal file: /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.runs/synth_1/vivado.jou
+# Running On: insa-11279, OS: Linux, CPU Frequency: 4390.095 MHz, CPU Physical cores: 6, Host memory: 67238 MB
+#-----------------------------------------------------------
+source PROC_FINAL.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1334.883 ; gain = 0.023 ; free physical = 58762 ; free virtual = 70132
+Command: read_checkpoint -auto_incremental -incremental /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/utils_1/imports/synth_1/PSI_ALU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/utils_1/imports/synth_1/PSI_ALU.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top PROC_FINAL -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9937
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1700.684 ; gain = 365.801 ; free physical = 58264 ; free virtual = 69627
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PROC_FINAL' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:43]
+INFO: [Synth 8-3491] module 'BancMem_Instr' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancMem_Instr.vhd:34' bound to instance 'BMI' of component 'BancMem_Instr' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'BancMem_Instr' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancMem_Instr.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'BancMem_Instr' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancMem_Instr.vhd:44]
+INFO: [Synth 8-3491] module 'Pipeline3Ch' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline3Ch.vhd:34' bound to instance 'LI_DI_PL' of component 'Pipeline3Ch' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:250]
+INFO: [Synth 8-638] synthesizing module 'Pipeline3Ch' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline3Ch.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'Pipeline3Ch' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline3Ch.vhd:48]
+INFO: [Synth 8-3491] module 'Pipeline3Ch' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline3Ch.vhd:34' bound to instance 'DI_EX_PL' of component 'Pipeline3Ch' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:264]
+INFO: [Synth 8-3491] module 'Pipeline2Ch' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline2Ch.vhd:34' bound to instance 'EX_Mem_PL' of component 'Pipeline2Ch' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:278]
+INFO: [Synth 8-638] synthesizing module 'Pipeline2Ch' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline2Ch.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'Pipeline2Ch' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline2Ch.vhd:45]
+INFO: [Synth 8-3491] module 'Pipeline2Ch' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline2Ch.vhd:34' bound to instance 'Mem_RE_PL' of component 'Pipeline2Ch' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:289]
+INFO: [Synth 8-3491] module 'BancReg' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancReg.vhd:34' bound to instance 'RB' of component 'BancReg' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:300]
+INFO: [Synth 8-638] synthesizing module 'BancReg' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancReg.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'BancReg' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancReg.vhd:46]
+INFO: [Synth 8-3491] module 'PSI_ALU' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PSI_ALU.vhd:36' bound to instance 'UAL' of component 'PSI_ALU' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:312]
+INFO: [Synth 8-638] synthesizing module 'PSI_ALU' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PSI_ALU.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'PSI_ALU' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PSI_ALU.vhd:47]
+INFO: [Synth 8-3491] module 'BancMem_Data' declared at '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancMem_Data.vhd:34' bound to instance 'BMD' of component 'BancMem_Data' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:324]
+INFO: [Synth 8-638] synthesizing module 'BancMem_Data' [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancMem_Data.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'BancMem_Data' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/BancMem_Data.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'PROC_FINAL' (0#1) [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/PROC_FINAL.vhd:43]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1813.652 ; gain = 478.770 ; free physical = 57934 ; free virtual = 69313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1828.496 ; gain = 493.613 ; free physical = 57930 ; free virtual = 69309
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1836.500 ; gain = 501.617 ; free physical = 57923 ; free virtual = 69303
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1863.492 ; gain = 528.609 ; free physical = 58045 ; free virtual = 69429
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 288   
++---Muxes : 
+	 256 Input   32 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 20    
+	   2 Input    1 Bit        Muxes := 275   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'Mem_RE_PL/OUT_A_reg' and it is trimmed from '8' to '4' bits. [/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.srcs/sources_1/new/Pipeline2Ch.vhd:58]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57719 ; free virtual = 69132
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57719 ; free virtual = 69132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57719 ; free virtual = 69132
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |     3|
+|4     |LUT2   |    43|
+|5     |LUT3   |    42|
+|6     |LUT4   |    68|
+|7     |LUT5   |    76|
+|8     |LUT6   |   906|
+|9     |MUXF7  |   304|
+|10    |MUXF8  |   136|
+|11    |FDRE   |  1008|
+|12    |FDSE   |  1276|
+|13    |IBUF   |     2|
+|14    |OBUF   |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------+--------------+------+
+|      |Instance    |Module        |Cells |
++------+------------+--------------+------+
+|1     |top         |              |  3891|
+|2     |  BMD       |BancMem_Data  |  2993|
+|3     |  BMI       |BancMem_Instr |    43|
+|4     |  DI_EX_PL  |Pipeline3Ch   |   109|
+|5     |  EX_Mem_PL |Pipeline2Ch   |   386|
+|6     |  LI_DI_PL  |Pipeline3Ch_0 |    32|
+|7     |  Mem_RE_PL |Pipeline2Ch_1 |    53|
+|8     |  RB        |BancReg       |   224|
+|9     |  UAL       |PSI_ALU       |    15|
++------+------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.008 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2012.016 ; gain = 677.125 ; free physical = 57711 ; free virtual = 69124
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2012.016 ; gain = 0.000 ; free physical = 57975 ; free virtual = 69397
+INFO: [Netlist 29-17] Analyzing 450 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2086.848 ; gain = 0.000 ; free physical = 57973 ; free virtual = 69407
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: fb0e0110
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 2086.848 ; gain = 751.965 ; free physical = 57972 ; free virtual = 69407
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1657.568; main = 1351.779; forked = 385.436
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2973.977; main = 2086.852; forked = 977.965
+INFO: [Common 17-1381] The checkpoint '/home/carraz-b/4A/PSI/PSI_INSA/CPU_RISC/CPU_RISC.runs/synth_1/PROC_FINAL.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file PROC_FINAL_utilization_synth.rpt -pb PROC_FINAL_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue May 28 09:39:25 2024...

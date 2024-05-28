@@ -48,8 +48,8 @@ signal bancMem_instr : mem_instr;
 
 begin
 
- bancMem_instr <= (x"00000000",x"06040106", x"07060206", x"04050106", x"04010205", x"01020301", x"03020402", x"03040503", 
-                    x"08050607", x"05050108", x"08150206", x"07020805", x"06040106", x"ff040106", others => x"ffffffff"); --instanciée pour tester 
+ --bancMem_instr <= (x"00000000",x"06040106", x"07060206", x"04050106", x"04010205", x"01020301", x"03020402", x"03040503", 
+                  --  x"08050607", x"05050108", x"08150206", x"07020805", x"06040106", x"ff040106", others => x"ffffffff"); --instanciée pour tester 
  -- x"00" rien
  -- x"01" on AFC 4 dans l'adresse 01
  -- x"02" on AFC 6 dans l'adresse 02
@@ -61,6 +61,7 @@ begin
  -- x"08" on LOAD adresse @05 dans @06 (on devrait avoir 05 dans @06)
  -- x"09" on STORE le contenu du registre @05 dans @01 de la memoire de données (on devrait avoir 40 dans @01|data)
  
+ bancMem_instr <= (x"00000000", x"00080106", x"00090206", x"01020301", x"00030405", others => x"ffffffff"); 
  memInstr : process
     begin
             wait until CLK'event and CLK = '1';

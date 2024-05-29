@@ -7,7 +7,7 @@ print(b);
 
 
 a = &b;
-print(a);
+print(*a);
 
 b = 15;
 print(*a);

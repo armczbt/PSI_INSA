@@ -40,10 +40,10 @@ function_call: tID tLPAR parameter_call tRPAR {}
               ;
 
 parameter_decla: 
-                | tINT tID {addSymbol($2,false);} 
+                | tINT tID {addSymbol($2,false);initVar($2);} 
                 | parameter_decla tCOMMA tINT tID {addSymbol($4,false); initVar($4);} 
-                | tINT tMUL tID {addSymbol($3,true);} 
-                | parameter_decla tCOMMA tINT tMUL tID {addSymbol($5,true);} 
+                | tINT tMUL tID {addSymbol($3,true);initVar($3);} 
+                | parameter_decla tCOMMA tINT tMUL tID {addSymbol($5,true);initVar($5);} 
                 | tVOID {} 
                 ;
 
@@ -66,7 +66,7 @@ statement: assign tSEMI {}
             ;
 
 assign:   tID tASSIGN expression {initVar($1);COP(getVarAddress($1), getLastAddr()-1); freeTmp();}
-        | tMUL tID tASSIGN expression {checkInit($2);COP_INDIRECT_G(getVarAddress($2), getLastAddr()-1); freeTmp();}
+        | tMUL tID tASSIGN expression {initVar($2);COP_INDIRECT_G(getVarAddress($2), getLastAddr()-1); freeTmp();}
         ;
 
 declaration: tINT decla tSEMI
@@ -74,7 +74,7 @@ declaration: tINT decla tSEMI
 
 decla:  decla tCOMMA decla
       | tID {addSymbol($1,false);}
-      | tID tASSIGN expression {freeTmp(); addSymbol($1,false); initVar($1);}
+      | tID tASSIGN expression {freeTmp(); addSymbol($1, false); initVar($1);}
       | tMUL tID {addSymbol($2,true);}
       ;
 

@@ -121,7 +121,7 @@ atom: tID {
     } 
     | tADDRESS tID {
             addTmp();
-            AFC(getVarAddress($2), getLastAddr()-1);
+            AFC(getLastAddr()-1,getVarAddress($2));
     }
     ;
 

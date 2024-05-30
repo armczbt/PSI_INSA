@@ -106,9 +106,9 @@ void COP_INDIRECT_G(int regDest, int regSrc){
     addInstruction(0xD, regDest, regSrc, 0);
 }
 
-// COP_INDIRECT DG (pointeur a droite)
+// COP_INDIRECT D (pointeur a droite)
 void COP_INDIRECT_D(int regDest, int regSrc){
-    addInstruction(0xD, regDest, regSrc, 0);
+    addInstruction(0xE, regDest, regSrc, 0);
 }
 
 // PATCH

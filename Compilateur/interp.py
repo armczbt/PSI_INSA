@@ -58,7 +58,7 @@ while ip<len(asm):
     elif asm[ip][0]==13: # COP_INDIRECT G
         mem[mem[asm[ip][1]]]=mem[asm[ip][2]]
 
-    elif asm[ip][0]==13: # COP_INDIRECT D
+    elif asm[ip][0]==14: # COP_INDIRECT D
         mem[asm[ip][1]]=mem[mem[asm[ip][2]]]
 
     ip+=1

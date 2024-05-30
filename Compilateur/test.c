@@ -17,7 +17,6 @@ print(*a);
 
 print(*a);
 
-b = *a;
 
 print(b);
 }

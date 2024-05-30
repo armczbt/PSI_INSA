@@ -1421,7 +1421,7 @@ yyreduce:
 #line 122 "lex.y"
                    {
             addTmp();
-            AFC(getVarAddress((yyvsp[0].str)), getLastAddr()-1);
+            AFC(getLastAddr()-1,getVarAddress((yyvsp[0].str)));
     }
 #line 1427 "lex.tab.c"
     break;
